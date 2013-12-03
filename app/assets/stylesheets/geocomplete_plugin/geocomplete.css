@@ -1,0 +1,8 @@
+.map_canvas { 
+  height: 450px; 
+  position: relative;
+  width : 40%;
+  border: 10px solid #FFF;
+  background-color: rgb(229, 227, 223); 
+  display: inline-block;
+}
