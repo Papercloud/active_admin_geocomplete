@@ -7,20 +7,20 @@ ActiveAdminGeocomplete
 
 	gem 'active_admin_geocomplete' , github: 'papercloud/active_admin_geocomplete'
 
-include css file to active_admin.css.scss
+Include css file to active_admin.css.scss
 
 	@import "active_admin/geocomplete";
 
-include javascript files to active_admin.js.coffee
+Include javascript files to active_admin.js.coffee
 
 	#= require jquery.geocomplete
 	#= require active_admin/geocomplete
 
-render partial 
+Render partial 
 
 	<%= render "active_admin/geocomplete", :form => f %>
 
-# Passing options
+## Passing options
 
 If model has different names for lat,lng or address (defaults: latitude, longitude, address)
 
