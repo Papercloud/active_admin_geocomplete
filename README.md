@@ -16,7 +16,7 @@ include javascript files to active_admin.js.coffee
 	#= require jquery.geocomplete
 	#= require active_admin/geocomplete
 
-- render partial inside formtastic
+render partial 
 
 	<%= render "active_admin/geocomplete", :form => f %>
 
