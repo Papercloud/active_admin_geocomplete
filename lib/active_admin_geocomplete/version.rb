@@ -1,3 +1,3 @@
-module GeocompletePlugin
+module ActiveAdminGeocomplete
   VERSION = "0.1"
 end

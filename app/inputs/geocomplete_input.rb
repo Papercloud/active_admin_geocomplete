@@ -1,9 +1,11 @@
-class GeocompleteInput < Formtastic::Inputs::TextInput
+class GeocompleteInput < Formtastic::Inputs::StringInput
 
   # include Formtastic::Inputs::Base
 
   def input_html_options
-    super.merge(:class => "geocomplete")
+  	{
+  	  :class => "find_location_input"
+  	}.merge(super)
   end
 
 end

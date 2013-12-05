@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $find_field = $("#find_location_input");
+  $find_field = $(".find_location_input");
 
   //setup
   $find_field.geocomplete({
