@@ -1,11 +1,17 @@
+ <%
+ address = "address" if address.nil?
+ lng = "longitude" if lng.nil?
+ lat = "latitude" if lat.nil?
+ %>
+
  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 
-  <%= f.inputs "Location" do %>
-    <%= f.input :address, :as => :geocomplete  %>
+  <%= form.inputs "Location" do %>
+    <%= form.input address, :as => :geocomplete  %>
     <li class="input optional" id="map_canvas_container">
       <label class=" label">Location preview</label>
       <div class="map_canvas"/>
     </li>
-    <%= f.input :latitude, input_html: {data: {geo: "lat"}} %>
-    <%= f.input :longitude, input_html: {data: {geo: "lng"}} %>
+    <%= form.input lat, input_html: {data: {geo: "lat"}} if lat != false%>
+    <%= form.input lng, input_html: {data: {geo: "lng"}} if lng != false%>
   <% end %>
