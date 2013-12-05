@@ -8,19 +8,24 @@ ActiveAdminGeocomplete
 	gem 'active_admin_geocomplete' , github: 'papercloud/active_admin_geocomplete'
 
 include css file to active_admin.css.scss
+
 	@import "active_admin/geocomplete";
 
 include javascript files to active_admin.js.coffee
+
 	#= require jquery.geocomplete
 	#= require active_admin/geocomplete
 
 - render partial inside formtastic
+
 	<%= render "active_admin/geocomplete", :form => f %>
 
 # Passing options
 
 If model has different names for lat,lng or address (defaults: latitude, longitude, address)
+
 	<%= render "active_admin/geocomplete", :form => f, :lng => 'lng', :lat => 'lat', :address => 'full_address' %>
 
 Disable latitude or longitude fields
+
 	<%= render "active_admin/geocomplete", :form => f, :lng => false, :lat => false%>
