@@ -3,6 +3,7 @@ ActiveAdminGeocomplete
 
 - Add jQuery geocomplete to Active Admin
 
+Credit goes to http://ubilabs.github.io/geocomplete/ for geocomplete.js
 ## Installation
 
 	gem 'active_admin_geocomplete' , github: 'papercloud/active_admin_geocomplete'
