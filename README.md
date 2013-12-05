@@ -18,14 +18,14 @@ Include javascript files to active_admin.js.coffee
 
 Render partial 
 
-	<%= render "active_admin/geocomplete", :form => f %>
+	render "active_admin/geocomplete", :form => f
 
 ## Passing options
 
 If model has different names for lat,lng or address (defaults: latitude, longitude, address)
 
-	<%= render "active_admin/geocomplete", :form => f, :lng => 'lng', :lat => 'lat', :address => 'full_address' %>
+	render "active_admin/geocomplete", :form => f, :lng => 'lng', :lat => 'lat', :address => 'full_address'
 
 Disable latitude or longitude fields
 
-	<%= render "active_admin/geocomplete", :form => f, :lng => false, :lat => false%>
+	render "active_admin/geocomplete", :form => f, :lng => false, :lat => false
