@@ -22,7 +22,7 @@ Render partial
 
 ## Passing options
 
-If model has different names for lat,lng or address (defaults: latitude, longitude, address)
+If model has different names for lat, lng or address (defaults: latitude, longitude, address)
 
 	render "active_admin/geocomplete", :form => f, :lng => 'lng', :lat => 'lat', :address => 'full_address'
 
