@@ -5,7 +5,8 @@
  %>
 
  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-
+<%= javascript_include_tag "jquery.geocomplete"%>
+<%= javascript_include_tag "active_admin/geocomplete"%>
   <%= form.inputs "Location" do %>
   	<% if address != false%>
     	<%= form.input address, :as => :geocomplete %>

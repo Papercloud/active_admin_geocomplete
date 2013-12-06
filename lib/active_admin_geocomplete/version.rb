@@ -1,3 +1,3 @@
 module ActiveAdminGeocomplete
-  VERSION = "0.2"
+  VERSION = "0.21"
 end
