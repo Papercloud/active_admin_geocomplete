@@ -27,6 +27,6 @@ If model has different names for lat, lng or address (defaults: latitude, longit
 
 	render "active_admin/geocomplete", :form => f, :lng => 'lng', :lat => 'lat', :address => 'full_address'
 
-Disable latitude or longitude fields
+Disable latitude, longitude or address fields (Set address to false if there isn't an address column in your model)
 
-	render "active_admin/geocomplete", :form => f, :lng => false, :lat => false
+	render "active_admin/geocomplete", :form => f, :lng => false, :lat => false, :address => false
