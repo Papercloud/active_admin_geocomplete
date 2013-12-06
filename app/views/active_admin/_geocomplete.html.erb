@@ -7,9 +7,16 @@
  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 
   <%= form.inputs "Location" do %>
-    <%= form.input address, :as => :geocomplete  %>
+  	<% if address != false%>
+    	<%= form.input address, :as => :geocomplete %>
+    <% else %>
+	    <li class="input optional">
+	      <label class="label">Address</label>
+	      <input type="text" class="find_location_input">
+	    </li>
+    <% end %>
     <li class="input optional" id="map_canvas_container">
-      <label class=" label">Location preview</label>
+      <label class="label">Location preview</label>
       <div class="map_canvas"/>
     </li>
     <%= form.input lat, input_html: {data: {geo: "lat"}} if lat != false%>
