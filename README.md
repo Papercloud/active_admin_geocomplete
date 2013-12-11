@@ -6,7 +6,7 @@ ActiveAdminGeocomplete
 Credit goes to http://ubilabs.github.io/geocomplete/ for geocomplete.js
 ## Installation
 
-	gem 'active_admin_geocomplete' , github: 'papercloud/active_admin_geocomplete'
+	gem 'active_admin_geocomplete' , github: 'Papercloud/active_admin_geocomplete'
 
 Include css file to active_admin.css.scss
 
