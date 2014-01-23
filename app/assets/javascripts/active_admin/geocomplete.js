@@ -23,7 +23,7 @@ $(document).ready(function(){
   $find_field.bind("geocode:dragged", function(event, latLng){
     $("input[data-geo=lat]").val(latLng.lat());
     $("input[data-geo=lng]").val(latLng.lng());
-    $find_field.geocomplete("find", latLng.lat() + ',' + latLng.lng()); // so we get address updated on drag as well 
+    // $find_field.geocomplete("find", latLng.lat() + ',' + latLng.lng()); // so we get address updated on drag as well 
   });
   /////////////////////////////////////////////////////////
 
