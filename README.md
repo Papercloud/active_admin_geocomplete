@@ -17,7 +17,7 @@ Include javascript files to active_admin.js.coffee
 	#= require jquery.geocomplete
 	#= require active_admin/geocomplete
 
-Render partial 
+Render partial
 
 	render "active_admin/geocomplete", :form => f
 
@@ -30,3 +30,9 @@ If model has different names for lat, lng or address (defaults: latitude, longit
 Disable latitude, longitude or address fields (Set address to false if there isn't an address column in your model)
 
 	render "active_admin/geocomplete", :form => f, :lng => false, :lat => false, :address => false
+
+If you are using `https://` for your website
+
+    render "active_admin/geocomplete", :form => f, :https => true
+
+

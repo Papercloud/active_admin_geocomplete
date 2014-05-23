@@ -2,9 +2,15 @@
  address = "address" if address.nil?
  lng = "longitude" if lng.nil?
  lat = "latitude" if lat.nil?
+ https = false if https.nil?
  %>
 
+<% if https %>
  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<% else %>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<% end %>
+
 <%= javascript_include_tag "jquery.geocomplete"%>
 <%= javascript_include_tag "active_admin/geocomplete"%>
   <%= form.inputs "Location" do %>
