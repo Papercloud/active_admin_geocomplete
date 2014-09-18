@@ -17,15 +17,16 @@ $(document).ready(function(){
 
     /////////////////////////////////////////////////////////
     $find_field.bind("geocode:result", function(event, result){
-      // console.log("result");
-      // console.log(result.address_components);
-      var full_address = $("input[data-geo=formatted_address]", $wrapper).val();
+      wrapper = $(event.target).closest('.aageocomplete_wrapper')
+      var full_address = $("input[data-geo=formatted_address]", wrapper).val();
     });
 
     /////////////////////////////////////////////////////////
     $find_field.bind("geocode:dragged", function(event, latLng){
-      $("input[data-geo=lat]", $wrapper).val(latLng.lat());
-      $("input[data-geo=lng]", $wrapper).val(latLng.lng());
+      wrapper = $(event.target).closest('.aageocomplete_wrapper')
+
+      $("input[data-geo=lat]", wrapper).val(latLng.lat());
+      $("input[data-geo=lng]", wrapper).val(latLng.lng());
       // $find_field.geocomplete("find", latLng.lat() + ',' + latLng.lng()); // so we get address updated on drag as well
     });
     /////////////////////////////////////////////////////////
