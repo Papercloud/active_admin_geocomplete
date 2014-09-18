@@ -3,6 +3,7 @@
  lng = "longitude" if lng.nil?
  lat = "latitude" if lat.nil?
  https = false if https.nil?
+ map_id = "map_canvas" if map_id.nil?
  %>
 
 <% if https %>
@@ -11,21 +12,19 @@
   <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 <% end %>
 
-<%= javascript_include_tag "jquery.geocomplete"%>
-<%= javascript_include_tag "active_admin/geocomplete"%>
-  <%= form.inputs "Location" do %>
-  	<% if address != false%>
-    	<%= form.input address, :as => :geocomplete %>
-    <% else %>
-	    <li class="input optional">
-	      <label class="label">Address</label>
-	      <input type="text" class="find_location_input">
-	    </li>
-    <% end %>
-    <li class="input optional" id="map_canvas_container">
-      <label class="label">Location preview</label>
-      <div class="map_canvas"/>
+<%= form.inputs "Location", class: "aageocomplete_wrapper" do %>
+	<% if address != false%>
+  	<%= form.input address, :as => :geocomplete %>
+  <% else %>
+    <li class="input optional">
+      <label class="label">Address</label>
+      <input type="text" class="find_location_input">
     </li>
-    <%= form.input lat, input_html: {data: {geo: "lat"}} if lat != false%>
-    <%= form.input lng, input_html: {data: {geo: "lng"}} if lng != false%>
   <% end %>
+  <li class="input optional" id="map_canvas_container">
+    <label class="label">Location preview</label>
+    <div class="map_canvas" id="<%= map_id %>"/>
+  </li>
+  <%= form.input lat, input_html: {data: {geo: "lat"}} if lat != false%>
+  <%= form.input lng, input_html: {data: {geo: "lng"}} if lng != false%>
+<% end %>

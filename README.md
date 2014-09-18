@@ -35,4 +35,6 @@ If you are using `https://` for your website
 
     render "active_admin/geocomplete", :form => f, :https => true
 
+If you want to use multiple geocomplete instances on the one page (i.e. for nested forms), you need to pass through a `map_id` (defaults to "map_canvas")
 
+    render "active_admin/geocomplete", :form => f, :map_id => "my_map"
