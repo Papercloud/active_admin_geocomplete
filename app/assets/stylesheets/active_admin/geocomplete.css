@@ -1,8 +1,12 @@
-.map_canvas { 
-  height: 450px; 
+.map_canvas {
+  height: 450px;
   position: relative;
   width : 40%;
   border: 10px solid #FFF;
-  background-color: rgb(229, 227, 223); 
+  background-color: rgb(229, 227, 223);
   display: inline-block;
+}
+
+#icon-url, #default-location {
+  display: none;
 }

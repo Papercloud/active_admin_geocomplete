@@ -4,15 +4,20 @@
  lat = "latitude" if lat.nil?
  https = false if https.nil?
  map_id = "map_canvas" if map_id.nil?
+ api_key = ENV.fetch('GOOGLE_API_KEY')
+ custom_icon = nil if custom_icon.nil?
+ default_location = nil if default_location.nil?
  %>
 
 <% if https %>
- <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=<%= api_key %>&amp;libraries=places"></script>
 <% else %>
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?key=<%= api_key %>&amp;libraries=places"></script>
 <% end %>
 
 <%= form.inputs "Location", class: "aageocomplete_wrapper" do %>
+  <input id="icon-url" value=<%= custom_icon %>>
+  <input type="string" id="default-location" value=<%= default_location %>>
 	<% if address != false%>
   	<%= form.input address, :as => :geocomplete %>
   <% else %>
